@@ -1,0 +1,428 @@
+/* DIFERENTES FUENTES GOOGLE FONTS:
+
+font-family: 'Dancing Script', cursive;
+font-family: 'Kaushan Script', cursive;
+font-family: 'BenchNine', sans-serif;
+font-family: 'Advent Pro', sans-serif;
+font-family: 'Pragati Narrow', sans-serif;
+font-family: 'Merienda', cursive; 
+font-family: 'Tenor Sans', sans-serif;*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    background-color: #E6E6E9;
+    box-sizing: border-box;
+    height: 5500px;
+}
+
+header{
+    margin: auto;
+    height: 2%;
+    width: inherit;
+    box-sizing: inherit;
+    background-color: #66666E;
+    color: #03062B;
+    font-size: 2em;
+    display: flex;
+    flex-wrap: nowrap;
+    font-weight: 900;
+    justify-content: space-between;
+}
+
+main{
+    height: 96%;
+    margin: inherit;
+    box-sizing: inherit;
+}
+
+footer{
+    height: 2%;
+    background-color: #03062B;
+    margin-bottom: 0;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    color: #9999A1;
+    text-shadow: #66666E 1px 1px;
+    box-sizing: inherit;
+}
+
+#logo1{
+    margin: auto 50px;
+    height: 100px;
+    width: 100px;
+    background-image: url("img/anchor_pelada.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+
+/* .fade-out {
+    animation: fadeOut ease 8s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    -webkit-animation: fadeOut ease 8s;
+    -moz-animation: fadeOut ease 8s;
+    -o-animation: fadeOut ease 8s;
+    -ms-animation: fadeOut ease 8s;
+  }
+
+@keyframes fadeOut {
+0% {
+    opacity:1;
+}
+100% {
+    opacity:0;
+}
+}
+
+@-moz-keyframes fadeOut {
+0% {
+    opacity:1;
+}
+100% {
+    opacity:0;
+}
+}
+
+@-webkit-keyframes fadeOut {
+0% {
+    opacity:1;
+}
+100% {
+    opacity:0;
+}
+}
+
+@-o-keyframes fadeOut {
+0% {
+    opacity:1;
+}
+100% {
+    opacity:0;
+}
+}
+
+@-ms-keyframes fadeOut {
+0% {
+    opacity:1;
+}
+100% {
+    opacity:0;
+}} */
+
+header nav{
+    margin-right: 50px;
+    width: 50%;
+    box-sizing: inherit;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+    list-style-type: none;
+    font-family: 'Merienda', cursive;
+}
+
+header nav ul li{
+    padding-right: 5px;
+}
+
+#contact{
+    position: fixed;
+    margin-left: 10px;
+    margin-top: 400px;
+}
+
+.banner{
+    height: 15%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("img/barra.jpg");
+}
+
+#nosotros{
+    height: 10%;
+    box-sizing: inherit;
+}
+
+.title{
+    width: 100%;
+    height: 7%;
+    color: #03062B;
+    font-size: 1.6em;
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+    margin-top: 10px;
+}
+
+.display{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+}
+
+.display_us{
+    height: 80%;
+}
+
+.us{
+    margin: auto;
+    width: 30%;
+    color: black;
+}
+
+p{
+    font-family: 'Tenor Sans', sans-serif;
+    text-align: justify;
+}
+
+.us h2{
+    color: #66666E;
+    font-family: 'Dancing Script', cursive; 
+    text-shadow: black 1.45px 1.45px;
+}
+
+.logo2{
+    background-image: url("img/anchor.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80%;
+    width: 30%;
+    margin: auto;
+}
+
+.back{
+    width: 100%;
+    justify-content: center;
+    font-size: 1.3em;
+    margin-bottom: 0;
+    text-align: center;
+    font-family: 'Pragati Narrow', sans-serif;  
+    margin: 15px 0;
+}
+
+#servicios{
+    height: 15%;
+    box-sizing: inherit;
+}
+
+.serv{
+    width: 22%;
+    background-color: #9999A1;
+    margin: 30px auto 15px;
+}
+
+.serv p{
+    padding: 8px;
+    padding-top: 0;
+    font-size: 1em;
+    text-align: center;
+}
+
+.serv h3{
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: #66666E;
+    font-size: 1.8em;
+    text-shadow: black 1.45px 1.45px;
+}
+
+#plus{
+    height: 30%;
+    float: left;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+#plus li, #plus strong, #plus span{
+    font-family: 'Tenor Sans', sans-serif;
+}
+
+#plus span{
+    text-align: center;
+}
+
+#plus h2{
+    color: #66666E;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5em;
+    text-shadow: #03062B 1.45px 1.45px;
+}
+
+#fotos{
+    box-sizing: inherit;
+    height: 30%;
+}
+
+#fotos h1{
+    margin: 0;
+}
+
+#events{
+    margin: 20px auto 30px;
+    width: 90%;
+    height: 55%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+}
+
+#fotos h3{
+    width: 100%;
+    text-align: left;
+    color: #66666E;
+    font-size: 2em;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: #03062B 1.45px 1.45px;
+    margin: 0 auto;
+}
+
+.pics_event{
+    height: 40%;
+    width: 30%;
+    background-color: #03062B;
+}
+
+#drinks{
+    height: 30%;
+    margin: auto;
+    width: 90%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    padding-bottom: 35px;
+}
+
+.pics_drink{
+    height: 60%;
+    width: 20%;
+    background-color: #03062B;
+    position: relative;
+    z-index: -1;
+}
+
+.name{
+    width: 100%;
+    bottom: 0;
+    opacity: 0.5;
+    background-color: #66666E;
+    height: 15%;
+    position: absolute;
+    z-index: 1;
+    justify-items: center;
+}
+
+.name p{
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: #E6E6E9;
+    text-shadow: black 1.45px 1.45px;
+    font-size: 1.4em;
+    margin: auto;
+}
+
+#formulario{
+    box-sizing: inherit;
+    height: 15%;
+}
+
+#formulario h1{
+    color: #66666E;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+    text-shadow: #03062B 1.45px 1.45px;
+    margin: 100px auto 30px;
+    text-align: center;
+}
+
+#contact-form{
+    font-family: 'Tenor Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 60%;
+    width: 60%;
+    margin: auto;
+}
+
+#contact-form input, textarea{
+    min-height: 30px;
+}
+
+#contact-form label{
+   color: #03062B;
+}
+
+#boton-enviar{
+    color: #E6E6E9;
+    background-color: #03062B;
+    width: 70px;
+    height: 50px;
+    margin: 40px auto;
+}
+
+#deco{
+    height: 33%;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.abajo{
+    height: 90%;
+    width: 25%;
+    margin: 0;
+    top: 0;
+}
+
+.drinks-icons img{
+    height: 50px;
+    width: 50px;   
+    padding-top: 40px;
+}
+
+#contacto{
+    box-sizing: border-box;
+    margin: auto auto 20px;
+}
+
+#contacto p{
+    font-family: 'Pragati Narrow', sans-serif;  
+    font-size: 1em;
+    text-align: center;
+    margin: 0;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+a:visited{
+    color: inherit;
+}
+a:hover{
+    color: #9999A1;
+    text-shadow: black 1.45px 1.45px;
+}
+
+.back a{
+    color:#03062B;
+}
+
+.back a:hover{
+    color: inherit;
+    text-shadow: none;
+}
