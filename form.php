@@ -55,7 +55,7 @@ if (isset($_POST['contact-submit']))
 
 ?>
 
-    <!-- Gracias por contactarse con nosotros! -->
+    <!-- SUCCESS. Gracias por contactarse con nosotros! -->
     <script>
     alert("¡Gracias por contactarse con nosotros! En breve estaremos respondiendo.");
     </script>
