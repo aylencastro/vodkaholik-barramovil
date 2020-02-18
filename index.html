@@ -2,14 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="ISO 8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
     <!-- <script src="script.js"></script> -->
     <link href="https://fonts.googleapis.com/css?family=Advent+Pro|BenchNine|Dancing+Script|Kaushan+Script|Merienda|Pragati+Narrow|Tenor+Sans&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="icon/iconfinder_anchor_3521344.ico" type="image/x-icon">
@@ -17,7 +13,9 @@
 </head>
 
 <body>
-    <div id="contact"><a href="#contacto"><img src="img/chat.png"></a></div>
+    <div class="contact-icon consult"><a href="#formulario"><img src="img/chat.png"></a></div>
+    <div class="contact-icon wp"><a href="#formulario"><img src="img/iconfinder_whatsapp_287615.png"></a></div> <!--  habría que cambiar la función del icono de whatsapp como para que envíe un msj  -->
+
     <header id="header">
         <div id="logo1"></div>
         <nav>
@@ -34,7 +32,7 @@
         <div class="banner banner_1 fade-out"></div> <!-- ojo que tiene class fade-out (comentada) -->
 
         <section id="nosotros">
-            <div class="title"><h1>Nosotros</h1></div>
+            <div class="title title-first"><h1>Nosotros</h1></div>
             <div class="display display_us">
                 <div class="us">
                     <h2>Quiénes Somos</h2>
@@ -76,12 +74,13 @@
                     <p>Nuestro servicio ofrece dos modalidades de contratación a coordinar:</p>
                     <ul>
                         <li>Barra Libre: <em>¡Consumís lo que querés!</em></li>
-                        <li>Cóctails Fijos: <em>Podés elegir la cantidad de tragos que querés.</em></li>
+                        <li>Cóctails Fijos: <em>Podés elegir la cantidad de tragos que tu evento requiera.</em></li>
                     </ul>
+                    <br><br>
+                    <hr>
+                    <div class="center"><strong>¡HACEMOS EL EVENTO A TU MEDIDA!</strong> <em>¡No dudes en consultarnos!</em></div>
                     <br>
-                    <span><strong>¡HACEMOS EL EVENTO A TU MEDIDA!</strong> <em>¡No dudes en consultarnos!</em></span>
-                    <br>
-                    <p>Armamos un presupuesto personalizado de acuerdo a lo que necesites. Los servicios son combinables.</p>
+                    <p class="center">Armamos un presupuesto personalizado de acuerdo a lo que necesites. Los servicios son combinables.</p>
                     
                 </div>
             </div>
@@ -115,13 +114,13 @@
 
             <form action="form.php" method="post" id="contact-form">
 
-                <label for="name">Nombre: </label><input type="text" name="name" id="name-form" required><br> <!-- Nombre -->
+                <label for="name">Nombre y Apellido: </label><input type="text" name="name" id="name-form" required placeholder="Natalia Natalia" minlength="4"><br> <!-- Nombre -->
 
-                <label for="email">Email: </label><input type="email" name="email" id="email-form" required><br> <!-- Email -->
+                <label for="email">Email: </label><input type="email" name="email" id="email-form" required placeholder="ejemplo@mail.com"><br> <!-- Email -->
 
-                <label for="msg">Consulta: </label><textarea type="text" name="msg" id="msg-form" required></textarea><br> <!-- Consulta -->
+                <label for="msg">Consulta: </label><textarea type="text" name="msg" id="msg-form" required placeholder="Escribinos aquí qué tipo de servicio buscás." minlength="10"></textarea><br> <!-- Consulta -->
 
-                <input type="submit" name="contact-submit" value="¡Enviar!" id="boton-enviar"><!-- Botón ENVIAR -->
+                <input type="submit" name="contact-submit" value="Enviar" id="boton-enviar"> <!-- Botón ENVIAR -->
 
             </form>
             
