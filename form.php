@@ -1,7 +1,5 @@
 <?php
 
-print phpinfo();
-
 $name = $email = $msg = "";
 
 //Medida de seguridad/Precaución n°1: que el nombre contenga números y letras nada más
