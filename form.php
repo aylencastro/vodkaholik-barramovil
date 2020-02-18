@@ -77,7 +77,7 @@ if (isset($_POST['contact-submit']))
 
         
         //A quién se envía el form (email falso)
-        $destinatario = "aylucastro@gmail.com";
+        $destinatario = "pipi@gmail.com";
 
         //Agregar subject al email
         $subject = "$name te ha enviado una consulta. REFILL-BARRA MÓVIL.";

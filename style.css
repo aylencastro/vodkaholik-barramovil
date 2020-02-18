@@ -11,6 +11,9 @@ font-family: 'Tenor Sans', sans-serif;*/
 html {
     scroll-behavior: smooth;
     min-width: 1025px;
+}
+
+* {
     box-sizing: border-box;
 }
 
