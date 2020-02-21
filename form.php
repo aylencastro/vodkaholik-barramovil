@@ -44,11 +44,12 @@
   }
 
   //Chequear que estén todos los campos no-vacíos
-  // (ELSE) Si está toda la info, entonces se guarda en variables sin espacios en blanco
+  // (ELSE) Si está toda la info, entonces se guarda en la variable sin espacios en blanco
 
   if (empty($_POST['name'])) 
     {
-      echo "<div class='error alerts'><h1>Por favor complete con su nombre.</h1><a href='index.html'>Volver</a></div>";
+      define("EMPTY", "NOMBRE");
+      include('includes/alerts/error-empty.php');
     } 
     else{
       $name = limpiado($_POST['name']);
@@ -56,14 +57,16 @@
     
   if (empty($_POST['email']))
     {
-      echo "<div class='error alerts'><h1>Por favor complete con un email.</h1><a href='index.html'>Volver</a></div>";
+      define("EMPTY", "CORREO ELECTRÓNICO");
+      include('includes/alerts/error-empty.php');
     } else{
       $email = trim($_POST['email']);
     }
     
   if (empty($_POST['msg']))
     {
-      echo "<div class='error alerts'><h1>Por favor escriba algo en su consulta.</h1><a href='index.html'>Volver</a></div>";
+      define("EMPTY", "CONSULTA");
+      include('includes/alerts/error-empty.php');
     } else{
       $msg = $_POST["msg"];
     }
@@ -74,25 +77,25 @@
       //Eliminación del script en caso de que se violen medidas de seguridad
       if(securityName($name) || IsInjected($email))
       {   
-        echo "<div class='error alerts'><h1>Por favor complete con datos que sean válidos.</h1><a href='index.html'>Volver</a></div>";
+        include('includes/alerts/error-invalid.php');
         die;
       }
 
           //A quién se envía el form 
-          $to = "fulanito@gmail.com";
+          $to = "holis@gmail.com";
 
           //Agregar subject al email
-          $subject = "$name te ha enviado una consulta. REFILL-BARRA MÓVIL.";
+          $subject = $name . " te ha enviado una consulta. REFILL-BARRA MÓVIL.";
 
           //Mensaje/Email 
-          $mensaje = "Nombre: $name \r\n";
-          $mensaje .= "Email: $email \r\n";
-          $mensaje .= "Consulta: \r\n $msg";
+          $mensaje = "Nombre: " . $name ."\r\n";
+          $mensaje .= "Email: " . $email . "\r\n";
+          $mensaje .= "Consulta: \r\n " . $msg;
           $mensaje = wordwrap($mensaje, 75); //Emprolija mensaje en 75 caracteres por línea
 
           //Poner header del mail en una variable
           $headers = "From: aylu@avmec.com \n";
-          $headers .= "Reply-To: $name <$email>\n";
+          $headers .= "Reply-To: " . $name ."<". $email .">\n";
           $headers .= "MIME-Version: 1.0\n";
           $headers .= "content-type: text/plain\n";
           $headers .= "X-Priority:1\n"; //Prioridad alta (1), Spam (0)
@@ -104,7 +107,7 @@
           if(mail($to, $subject, $mensaje, $headers))
           {        
             // SUCCESS. Gracias por contactarse con nosotros! 
-            echo "<div class='success alerts'><h1>¡Gracias por contactarse con nosotros! En breve estaremos respondiendo.</h1><a href='index.html'>Volver</a></div>";
+            include('includes/alerts/success.php');
           }
   }
 
