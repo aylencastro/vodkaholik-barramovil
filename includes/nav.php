@@ -25,7 +25,7 @@
    <?php
         foreach($navItems as $item)
         {
-            echo "<li><a href=\"$item[href]\">$item[title]</a></li>";
+            echo "<li><a href=\"$item[href]\" onclick='closeNav()'>$item[title]</a></li>";
         }
    ?>
 </ul>

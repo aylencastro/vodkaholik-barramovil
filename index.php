@@ -3,20 +3,30 @@
     include('includes/head.php');
 ?>
 
-    <header id="header">
+    <div class="contact-icon consult"><a href="#formulario"><img src="./img/contact/chat.png"></a></div>
+    <div class="contact-icon wp"><a href="#formulario"><img src="./img/contact/iconfinder_whatsapp_287615.png"></a></div> <!--  habría que cambiar la función del icono de whatsapp como para que envíe un msj  -->
+
+    <header id="header_desktop">
         <div id="logo1"></div>
         <nav>
-            <ul>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#fotos">Fotos</a></li>
-                <li><a href="#formulario">Contacto</a></li>
-            </ul>
+            <?php include('includes/nav.php'); ?>
         </nav>
     </header>
 
-    <main>
-        <div class="banner banner_1 fade-out"></div> <!-- ojo que tiene class fade-out (comentada) -->
+    <header id="header_mobile">
+        <div id="menu_icon" onclick="openNav()"><img src="./icon/menu.png" alt=""></div>
+        <div><h1>Refill </h1></div><div><h3> Barra Móvil</h3></div>
+        <div id="logo3"></div>
+        <div id="mySidenav" class="sidenav">
+            <nav>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <?php include('includes/nav.php'); ?>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="banner banner_1"></div>
 
         <section id="nosotros">
             <div class="title title-first"><h1>Nosotros</h1></div>
@@ -32,15 +42,16 @@
                     </p>
                 </div>
             </div>    
-            <div class="back"><a href="#header">Volver arriba</a></div> 
+            <div class="back"><a href="#header_desktop">Volver arriba</a></div> 
         </section>
 
         <section id="servicios">
-            <div class="title"><h1>Servicios</h1></div>
+            <div class="title"><h1>Servicios y Modalidades</h1></div>
             <div class="display">
                 <div class="serv">
                     <h3>Nacional</h3>
                     <p>Esta modalidad cuenta con bebidas de origen nacional. Cervezas, aperitivos y cóctails básicos.</p>
+                    <p><em><strong>Extras:</strong></em> Alquiler de choperas con una o dos canillas, barriles de cerveza artesanal, ¡y mucho más!</p> 
                 </div>
                 <div class="serv">
                     <h3>Plus Internacional</h3>
@@ -62,8 +73,9 @@
                     <ul>
                         <li>Barra Libre: <em>¡Consumís lo que querés!</em></li>
                         <li>Cóctails Fijos: <em>Podés elegir la cantidad de tragos que tu evento requiera.</em></li>
+                        <li>Sólo barmans: <em>Vos mismo podés proporcionar las bebidas y nosotros te preparamos los cócteles que desees.</em></li>
                     </ul>
-                    <br><br>
+                    <br>
                     <hr>
                     <div class="center"><strong>¡HACEMOS EL EVENTO A TU MEDIDA!</strong> <em>¡No dudes en consultarnos!</em></div>
                     <br>
@@ -71,41 +83,42 @@
                     
                 </div>
             </div>
-            <div class="back"><a href="#header">Volver arriba</a></div>
+            <div class="back"><a href="#header_desktop">Volver arriba</a></div>
         </section>
 
         <section id="fotos">
             <div class="title"><h1>Fotos</h1></div>
             <div id="events">
                 <h3>Eventos</h3>
-                <div class="pics_event"></div>
-                <div class="pics_event"></div>
-                <div class="pics_event"></div>
-                <div class="pics_event"></div>
-                <div class="pics_event"></div>
-                <div class="pics_event"></div>
+                <!-- los eventos tienen números para mostrar unos y otros no, después se modifica con javascript o se hace un carrousel -->
+                <div class="pics_event uno"></div>
+                <div class="pics_event dos"></div>
+                <div class="pics_event tres"></div>
+                <div class="pics_event cuatro"></div>
+                <div class="pics_event cinco"></div>
+                <div class="pics_event seis"></div>
             </div>
 
             <div id="drinks">
-                <h3>Algunos cóctails de autor</h3>
-                <div class="pics_drink"><div class="name"><p>Name1</p></div></div>
-                <div class="pics_drink"><div class="name"><p>Name2</p></div></div>
-                <div class="pics_drink"><div class="name"><p>Name3</p></div></div>
-                <div class="pics_drink"><div class="name"><p>Name4</p></div></div>
+                <h3>Algunos de nuestros cóctails</h3>
+                <div class="pics_drink one"><div class="name"><p>Lynchbourg Lemonade</p></div></div>
+                <div class="pics_drink two"><div class="name"><p>Name2</p></div></div>
+                <div class="pics_drink three"><div class="name"><p>Name3</p></div></div>
+                <div class="pics_drink four"><div class="name"><p>Name4</p></div></div>
             </div>
-            <div class="back"><a href="#header">Volver arriba</a></div>
+            <div class="back"><a href="#header_desktop">Volver arriba</a></div>
         </section>
 
         <section id="formulario">
             <h1>¡Contanos lo que buscás y nosotros te enviaremos un presupuesto de acuerdo a tus necesidades!</h1>
 
-            <form action="form.php" method="post" id="contact-form">
+            <form action="form.php" method="get" id="contact-form">
 
-                <label for="name">Nombre y Apellido: </label><input type="text" name="name" id="name-form" required placeholder="Natalia Natalia" minlength="4"><br> <!-- Nombre -->
+                <label for="name">Nombre y Apellido: </label><input type="text" name="name" id="name-form" requested placeholder="Natalia Natalia" minlength="4" spellcheck="false"><br> <!-- Nombre -->
 
-                <label for="email">Email: </label><input type="email" name="email" id="email-form" required placeholder="ejemplo@mail.com"><br> <!-- Email -->
+                <label for="email">Email: </label><input type="email" name="email" id="email-form" requested placeholder="ejemplo@mail.com" spellcheck="false"><br> <!-- Email -->
 
-                <label for="msg">Consulta: </label><textarea type="text" name="msg" id="msg-form" required placeholder="Escribinos aquí qué tipo de servicio buscás." minlength="10"></textarea><br> <!-- Consulta -->
+                <label for="msg">Consulta: </label><textarea type="text" name="msg" id="msg-form" requested placeholder="Escribinos aquí qué tipo de servicio buscás." minlength="10" spellcheck="false"></textarea><br> <!-- Consulta -->
 
                 <input type="submit" name="contact-submit" value="Enviar" id="boton-enviar"> <!-- Botón ENVIAR -->
 
@@ -118,8 +131,6 @@
         </section>
 
         <div class="banner banner_2"></div>
-
-    </main>
 
 <?php
     include('includes/footer.php');

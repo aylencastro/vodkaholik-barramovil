@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="ISO 8859-1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./styles/style.css">
     <script src="script.js"></script>
@@ -13,5 +13,3 @@
 </head>
 
 <body>
-    <div class="contact-icon consult"><a href="#formulario"><img src="./img/chat.png"></a></div>
-    <div class="contact-icon wp"><a href="#formulario"><img src="./img/iconfinder_whatsapp_287615.png"></a></div> <!--  habría que cambiar la función del icono de whatsapp como para que envíe un msj  -->

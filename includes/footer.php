@@ -1,3 +1,5 @@
+    </main>
+    
     <footer> 
             <div id="contacto">
                 <p>Barras Móviles Refill - Buenos Aires - Argentina</p>
