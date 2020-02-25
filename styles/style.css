@@ -52,8 +52,9 @@ footer{
     display: flex;
     justify-content: center;
     color: #9999A1;
-    text-shadow: #66666E 1px 1px;
     margin-bottom: 0;
+    font-family: 'Tenor Sans', sans-serif;
+    text-align: center;
 }
 
 #logo1{
@@ -402,40 +403,34 @@ textarea{
 }
 
 .main-form{
-    height: 84.8vh;
+    height: 82.3vh;
+    font-family: 'Tenor Sans', sans-serif;
+    transition: none;
 }
 
 .alerts{
-    height: 150vh;
+    height: 100%;
     width: 100%; 
-    font-family: 'Tenor Sans', sans-serif;
-    background-color: #9999A1;
+    text-align: center;
 }
 
 .error h1{
+    margin-bottom: 0;
     color: rgb(104, 17, 17);
-    text-shadow: black;
+    text-shadow: black 1px 1px;
 }
 
 .success h1{
     color: rgb(42, 88, 20);
-    text-shadow: black;
+    text-shadow: black 1px 1px;
+    margin-bottom: 0;
 }
 
 .form_logo{
-    height: 100px;
-    width: 60px;
-}
-
-#contacto{
-    margin: auto auto 20px;
-}
-
-#contacto p{
-    font-family: 'Pragati Narrow', sans-serif;  
-    font-size: 2.8vh;
-    text-align: center;
-    margin: 0;
+    height: 60vh;
+    width: 80vw;
+    background-size: contain;
+    margin: 2.5vh auto;
 }
 
 a{
@@ -446,6 +441,7 @@ a{
 a:visited{
     color: inherit;
 }
+
 a:hover{
     color: #9999A1;
     text-shadow: black 1.45px 1.45px;
@@ -457,6 +453,35 @@ a:hover{
 
 .back a:hover{
     color: inherit;
+    text-shadow: none;
+}
+
+.button-form{
+    color: #E6E6E9;
+    background-color: #03062B;
+    width: 21vw;
+    height: 8vh;
+    border-radius: 30px;
+    font-size: 2.8vh;
+}
+
+.button-form:hover{
+    background-color: rgb(8, 11, 63);
+}
+
+.social{
+    display: inline-flex;
+}
+
+#contacto p, #contacto a{
+    font-size: 1.9vh;
+}
+
+.instagram{
+    width: 2.5vw;
+}
+
+.instagram a:hover{
     text-shadow: none;
 }
 
@@ -496,9 +521,9 @@ a:hover{
     }
     
     footer{
-        height: 15vh;
+        height: 17vh;
         margin-bottom: 0;
-        bottom: 0;
+        bottom: 0;;
     }    
 
     #menu_icon{
@@ -790,8 +815,22 @@ a:hover{
     }
 
     .form_logo{
-        height: 80px;
-        width: 50px;
+        height: 60vh;
+        width: 80vw;
+        margin: auto;
+    }
+
+    .button-form{
+        width: 60vw;
+        height: 8vh;
+    }
+
+    .instagram{
+        width: 6vw;
+    }
+
+    #contacto a, #contacto p{
+        font-size: 2.1vh;
     }
 
     }
