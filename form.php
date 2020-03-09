@@ -2,6 +2,7 @@
 
   define("TITLE", "Refill | Barra Móvil");
   include('includes/head.php');
+  include('includes/main.php');
 
   $name = $email = $msg = "";
 
@@ -14,6 +15,7 @@
   //función que limpia/emprolija
   function limpiado($data)
   {
+      $data = ucfirst($data);
       $data = trim($data);
       $data = stripslashes($data);
       $data = htmlspecialchars($data);
@@ -33,8 +35,9 @@
                 );
     $inject = join('|', $injections);
     $inject = "/$inject/i";
-    if(preg_match($inject,$str))
-      {
+
+    if(preg_match($inject, $str))
+    {
       return true;
     }
     else
@@ -46,33 +49,33 @@
   //Chequear que estén todos los campos no-vacíos
   // (ELSE) Si está toda la info, entonces se guarda en la variable sin espacios en blanco
 
-  if (empty($_POST['name'])) 
+  if (empty($_GET['name'])) 
     {
       define("EMPTY", "NOMBRE");
       include('includes/alerts/error-empty.php');
     } 
     else{
-      $name = limpiado($_POST['name']);
+      $name = limpiado($_GET['name']);
     }
     
-  if (empty($_POST['email']))
+  if (empty($_GET['email']))
     {
       define("EMPTY", "CORREO ELECTRÓNICO");
       include('includes/alerts/error-empty.php');
     } else{
-      $email = trim($_POST['email']);
+      $email = trim($_GET['email']);
     }
     
-  if (empty($_POST['msg']))
+  if (empty($_GET['msg']))
     {
       define("EMPTY", "CONSULTA");
       include('includes/alerts/error-empty.php');
     } else{
-      $msg = $_POST["msg"];
+      $msg =  ucfirst($_GET["msg"]);
     }
 
   //La info fue enviada? (Se hizo click?)
-  if (isset($_POST['contact-submit']))
+  if (isset($_GET['contact-submit']))
   {
       //Eliminación del script en caso de que se violen medidas de seguridad
       if(securityName($name) || IsInjected($email))
@@ -82,35 +85,35 @@
       }
 
           //A quién se envía el form 
-          $to = "holis@gmail.com";
+          $to = "refill.barramovil@gmail.com";
 
           //Agregar subject al email
-          $subject = $name . " te ha enviado una consulta. REFILL-BARRA MÓVIL.";
+          $subject = "[REFILL-BARRA MÓVIL] " . $name . " te ha enviado una consulta.";
 
           //Mensaje/Email 
-          $mensaje = "Nombre: " . $name ."\r\n";
+          $mensaje .= "Nombre: " . $name ."\r\n";
           $mensaje .= "Email: " . $email . "\r\n";
           $mensaje .= "Consulta: \r\n " . $msg;
           $mensaje = wordwrap($mensaje, 75); //Emprolija mensaje en 75 caracteres por línea
 
           //Poner header del mail en una variable
-          $headers = "From: aylu@avmec.com \n";
-          $headers .= "Reply-To: " . $name ."<". $email .">\n";
-          $headers .= "MIME-Version: 1.0\n";
-          $headers .= "content-type: text/plain\n";
-          $headers .= "X-Priority:1\n"; //Prioridad alta (1), Spam (0)
-          $headers .= "X-MSMail-Priority: High \n";
-
+          $header = "From: aylu@avmec.com\nReply-To: " . $name ."<". $email .">\n";
+          $header .= "Mime-Version: 1.0\n";
+          $header .= "Content-Type: text/plain";
+          
           //Enviar el email a la casilla
-          mail($to, $subject, $mensaje, $headers);
+          mail($to, $subject, $mensaje, $header);
+                
+          // SUCCESS. Gracias por contactarse con nosotros! 
+          include('includes/alerts/success.php');
 
-          if(mail($to, $subject, $mensaje, $headers))
-          {        
-            // SUCCESS. Gracias por contactarse con nosotros! 
-            include('includes/alerts/success.php');
-          }
+?>
+        <script>
+          form.contact-submit.disabled = true;
+          return true;
+          document.getElementById("contact-form").reset();
+        </script>
+<?php        
   }
-
-  include('includes/footer.php');
 
 ?>
