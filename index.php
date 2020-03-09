@@ -25,7 +25,7 @@
         </div>
     </header>
 
-    <main id="main">
+    <main>
         <div class="banner banner_1"></div>
 
         <section id="nosotros">
@@ -42,7 +42,7 @@
                     </p>
                 </div>
             </div>    
-            <div class="back"><a href="#header_desktop">Volver arriba</a></div> 
+             
         </section>
 
         <section id="servicios">
@@ -83,7 +83,7 @@
                     
                 </div>
             </div>
-            <div class="back"><a href="#header_desktop">Volver arriba</a></div>
+            
         </section>
 
         <section id="fotos">
@@ -106,7 +106,7 @@
                 <div class="pics_drink three"><div class="name"><p>Name3</p></div></div>
                 <div class="pics_drink four"><div class="name"><p>Name4</p></div></div>
             </div>
-            <div class="back"><a href="#header_desktop">Volver arriba</a></div>
+           
         </section>
 
         <section id="formulario">
