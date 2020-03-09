@@ -85,7 +85,7 @@
       }
 
           //A quién se envía el form 
-          $to = "refill.barramovil@gmail.com";
+          $to = "maildelabarra@gmail.com";
 
           //Agregar subject al email
           $subject = "[REFILL-BARRA MÓVIL] " . $name . " te ha enviado una consulta.";
@@ -97,7 +97,7 @@
           $mensaje = wordwrap($mensaje, 75); //Emprolija mensaje en 75 caracteres por línea
 
           //Poner header del mail en una variable
-          $header = "From: aylu@avmec.com\nReply-To: " . $name ."<". $email .">\n";
+          $header = "From: maildelserver\nReply-To: " . $name ."<". $email .">\n";
           $header .= "Mime-Version: 1.0\n";
           $header .= "Content-Type: text/plain";
           
