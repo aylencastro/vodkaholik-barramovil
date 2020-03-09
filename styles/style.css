@@ -50,11 +50,15 @@ footer{
     height: 100px;
     background-color: #03062B;
     display: flex;
-    justify-content: center;
+    flex-flow: column;
     color: #9999A1;
     margin-bottom: 0;
     font-family: 'Tenor Sans', sans-serif;
+}
+
+footer p{
     text-align: center;
+    width: 100%;
 }
 
 #logo1{
@@ -176,15 +180,6 @@ p{
     margin: auto;
 }
 
-.back{
-    width: 100%;
-    justify-content: center;
-    font-size: 3vh;
-    text-align: center;
-    font-family: 'Pragati Narrow', sans-serif;  
-    margin-bottom: 1vw;
-}
-
 #servicios{
     height: 17%;
 }
@@ -218,14 +213,19 @@ p{
     margin-bottom: 30px;
 }
 
-#plus li, .center, #plus p, #plus em{
+#plus li, .center, #plus p{
     font-family: 'Tenor Sans', sans-serif;
     font-size: 2.4vh;
+}
+
+#plus em{
+    font-family: 'Tenor Sans', sans-serif;;
 }
 
 .serv em{
     text-align: left;
 }
+
 .center{
     text-align: center;
 }
@@ -447,14 +447,6 @@ a:hover{
     text-shadow: black 1.45px 1.45px;
 }
 
-.back a{
-    color:#03062B;
-}
-
-.back a:hover{
-    color: inherit;
-    text-shadow: none;
-}
 
 .button-form{
     color: #E6E6E9;
@@ -469,16 +461,8 @@ a:hover{
     background-color: rgb(8, 11, 63);
 }
 
-.social{
-    display: inline-flex;
-}
-
-#contacto p, #contacto a{
-    font-size: 1.9vh;
-}
-
 .instagram{
-    width: 2.5vw;
+    width: 25px;
 }
 
 .instagram a:hover{
@@ -487,7 +471,7 @@ a:hover{
 
 
 /* Versión mobile */
-@media screen and (max-width: 504px)
+@media screen and (max-width: 564px)
 {
     html {
         min-width: 320px;
@@ -517,13 +501,12 @@ a:hover{
     
     main{
         height: auto;
-        transition: margin-left .5s;
     }
     
     footer{
-        height: 17vh;
+        height: 150px;
         margin-bottom: 0;
-        bottom: 0;;
+        bottom: 0;
     }    
 
     #menu_icon{
@@ -566,7 +549,7 @@ a:hover{
         height: 100%; 
         width: 0;
         position: fixed; 
-        z-index: 1; 
+        z-index: 3; 
         top: 0; 
         left: 0;
         background-color: #66666e;
@@ -673,17 +656,11 @@ a:hover{
     .logo2{
         height: 30vh;
         width: 100%;
-        position: relative;
-        z-index: 1;
-    }
-
-    .back{
-        display: none;
     }
 
     #servicios{
         height: 230vh;
-        margin: 2vh auto 2vh
+        margin: 2vh auto 2vh;
     }
 
     .serv{
@@ -760,7 +737,7 @@ a:hover{
 
     #formulario{
         height: 90vh;
-        margin: 2vh auto 2vh
+        margin: 2vh auto 2vh;
     }
 
     #formulario h1{
@@ -779,6 +756,7 @@ a:hover{
 
     #contact-form input, textarea{
         min-height: 4.2vh;
+        font-size: 2.5vh;
         padding: 0.4vh;
     }
 
@@ -829,8 +807,356 @@ a:hover{
         width: 6vw;
     }
 
-    #contacto a, #contacto p{
-        font-size: 2.1vh;
+}
+
+/* Versión tablets */
+    @media screen and (max-width: 1024px) and (min-width: 505px)
+    {
+        html {
+            min-width: 505px;
+            max-width: 1024px;
+            scroll-behavior: smooth;
+        }
+        
+        body{
+            height: auto;
+        }
+        
+        #header_desktop{
+            display: none;
+        }
+
+        #header_mobile{
+            background-color: #9999A1;
+            position: fixed; 
+            top: 0;
+            width: 100%;
+            transition: top 0.4s;
+            display: flex;
+            height: 11vh;
+            justify-content: space-around;
+            flex-wrap: nowrap;
+        }
+        
+        main{
+            height: auto;
+        }
+        
+        footer{
+            height: 150px;
+            margin-bottom: 0;
+            bottom: 0;
+        }    
+
+        #menu_icon{
+            height: 7vh;
+            margin-top: 1.5vh;
+        }
+
+        #menu_icon img{
+            height: 100%;
+        }
+
+        #header_mobile h1{
+            color: #03062B;
+            margin-top: 1.5vh;
+            font-family: 'Kaushan Script', cursive;
+            font-size: 5.6vh;
+        }
+
+        #header_mobile h3{
+            color: #03062B;
+            margin-top: 3vh;
+            font-size: 3.7vh;
+            font-family: 'Merienda', cursive; 
+        }
+
+        #header_mobile nav li{
+            color: #03062B;
+            font-size: 2vh;
+            font-family: 'Kaushan Script', cursive;
+        }
+
+        #logo3{
+            height: 90%;
+            width: 19vw;
+            background-image: url("../img/anchor/ancla_sola.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .sidenav {
+            height: 100%; 
+            width: 0;
+            position: fixed; 
+            z-index: 3; 
+            top: 0; 
+            left: 0;
+            background-color: #66666e;
+            overflow-x: hidden; /* Disable horizontal scroll */
+            padding-top: 9vh; 
+            transition: 0.5s; 
+        }
+
+        #header_mobile nav{
+            width: 90%;
+        }
+        
+        #header_mobile nav ul{
+            display: flex;
+            flex-flow: column;
+            list-style-type: none;
+            padding-left: 3vw;
+        }
+        
+        .sidenav a {
+            padding: 8px 8px 8px 0;
+            font-size: 4.3vh;
+            color: #03062B;
+            text-shadow: #03062B 1px 1px;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .sidenav a:hover {
+            color: #E6E6E9;
+        }
+        
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 2.5vw;
+            font-size: 7vh;
+            margin-left: auto;
+        }
+        
+        .contact-icon{
+            margin-left: 2vw;
+            position: fixed;
+        }
+
+        .contact-icon img{
+            height: 78px;
+            width: 80px;
+        }
+        
+        .wp{
+            margin-top: 60vh;
+        }
+        
+        .consult{
+            margin-top: 72vh;
+        }
+        
+        .banner{
+            height: 70vh;
+            background-attachment: scroll;
+        }
+
+        .banner_1{ 
+            margin-top: 7vh;
+        }
+        
+        #nosotros{
+            height: 90vh;
+        }
+
+        .title{
+            font-size: 3vh;
+            margin: 1.2vh auto 0;
+        }
+
+        .display{
+            width: 85%;
+            margin: auto;
+        }
+
+        .display_us{
+            height: 80%;
+            width: 85%;
+        }
+
+        .us{
+            height: 33%;
+            width: 100%;
+            position: relative;
+            z-index: -1;
+        }
+
+        .us h2{
+            font-size: 3.7vh;
+            text-shadow: black 1px 1px;
+        }
+
+        p{
+            font-size: 2vh;
+        } 
+
+        .logo2{
+            height: 30vh;
+            width: 100%;
+        }
+
+        #servicios{
+            height: 180vh;
+            margin: 2vh auto 2vh;
+        }
+
+        .serv{
+            width: 65%;
+            margin: 1vh auto;
+        }
+
+        .serv p{
+            font-size: 2vh;
+        }
+
+        .serv h3{
+            text-shadow: black 1px 1px;
+            margin: 1vh;
+            font-size: 4vh;
+        }
+
+        #plus{
+            width: 80%;
+            margin: 3vh auto 0;
+        }
+
+        #plus li, .center, #plus p{
+            font-size: 2vh;
+        } 
+
+        #plus h2{
+            font-size: x-large; 
+            text-shadow: #03062B 1px 1px;
+        }
+
+        #fotos{
+            height: 200vh;
+            margin: 2vh auto;
+        }
+        
+        
+        #events{
+            margin: 1vh auto;
+            width: 90%;
+            height: 40%;
+            flex-flow: column;
+        }
+        
+        .tres, .cuatro, .cinco, .seis{display: none;}
+
+        #fotos h3{
+            font-size: 3.6vh;
+            text-shadow: #03062B 1px 1px;
+            margin: 2vh auto 2vh;
+        }
+
+        .pics_event{
+            width: 80%;
+            height: 44%;
+            background-color: #03062B;
+            margin: auto;
+        }
+
+        #drinks{
+            height: 48%;
+        }
+
+        .pics_drink{
+            width: 45%;
+            height: 45%;
+            margin: auto;
+        }
+
+        .name p{
+            text-shadow: black 1px 1px;
+            font-size: 2.8vh;
+            padding-bottom: 3vh;
+        }
+        
+        #formulario{
+            height: 130vh;
+            margin: 2vh auto 2vh;
+        }
+
+        #formulario h1{
+            width: 90%;
+            text-shadow: #03062B 1px 1px;
+            margin: 2vh auto 1vh;
+            font-size: 4.5vh;
+        }
+
+        #contact-form{
+            font-size: 2.6vh;
+            height: 60%;
+            width: 85%;
+            margin: 1vh auto;
+        }
+
+        #contact-form input, textarea{
+            min-height: 4.2vh;
+            font-size: 2.5vh;
+            padding: 0.4vh;
+        }
+
+        textarea{
+            max-width: 100%;
+            min-width: 100%;
+        }
+
+        #boton-enviar{
+            color: #E6E6E9;
+            background-color: #03062B;
+            width: 50%;
+            height: 5.8vh;
+            margin: 0 auto;
+            border-radius: 30px;
+        }
+
+        #deco{
+            height: 25%;
+        }
+
+        .abajo{
+            height: 34vh;
+            width: 33vw;
+            margin-top: -4.8vh;
+        }
+
+        .drinks-icons{
+            display: inline-flex;
+            justify-content: flex-end;
+            height: 120px;
+            width: 100px;
+        }
+
+        .drinks-icons img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .banner_2{
+            margin: 2vh 0 0;
+        }
+
+        .form_logo{
+            height: 60vh;
+            width: 80vw;
+            margin: auto;
+        }
+
+        .button-form{
+            width: 60vw;
+            height: 8vh;
+        }
+
+        .instagram{
+            width: 3vw;
+        }
+
+    
     }
 
-    }
+
