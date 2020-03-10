@@ -47,18 +47,33 @@ main{
 }
 
 footer{
-    height: 100px;
-    background-color: #03062B;
+    height: auto;
+    background-color: #E6E6E9;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.footer-text{
+    color: #03062B;
+    width: 80%;
+    margin: 3vh auto;
     display: flex;
     flex-flow: column;
-    color: #9999A1;
-    margin-bottom: 0;
-    font-family: 'Tenor Sans', sans-serif;
+}
+
+footer hr{
+    width: 70%;
+    margin: 2vh auto;
 }
 
 footer p{
-    text-align: center;
-    width: 100%;
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: medium;
+    margin: 0.2vh;
+}
+
+footer h3{
+    font-family: 'Kaushan Script', cursive;
 }
 
 #logo1{
@@ -402,12 +417,6 @@ textarea{
     padding-top: 5vh;
 }
 
-.main-form{
-    height: 82.3vh;
-    font-family: 'Tenor Sans', sans-serif;
-    transition: none;
-}
-
 .alerts{
     height: 100%;
     width: 100%; 
@@ -462,7 +471,7 @@ a:hover{
 }
 
 .instagram{
-    width: 25px;
+    width: 42px;
 }
 
 .instagram a:hover{
@@ -502,12 +511,6 @@ a:hover{
     main{
         height: auto;
     }
-    
-    footer{
-        height: 150px;
-        margin-bottom: 0;
-        bottom: 0;
-    }    
 
     #menu_icon{
         height: 7vh;
@@ -803,8 +806,12 @@ a:hover{
         height: 8vh;
     }
 
+    footer p{
+        font-size: larger;
+    }
+
     .instagram{
-        width: 6vw;
+        width: 8vw;
     }
 
 }
@@ -841,13 +848,7 @@ a:hover{
         main{
             height: auto;
         }
-        
-        footer{
-            height: 150px;
-            margin-bottom: 0;
-            bottom: 0;
-        }    
-
+       
         #menu_icon{
             height: 7vh;
             margin-top: 1.5vh;
@@ -1153,9 +1154,12 @@ a:hover{
         }
 
         .instagram{
-            width: 3vw;
+            width: 8vw;
         }
 
+        footer p{
+            font-size: larger;
+        }
     
     }
 
