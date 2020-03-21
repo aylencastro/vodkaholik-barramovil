@@ -3,6 +3,7 @@
     include('includes/head.php');
 ?>
 
+<div id="body-loaded">
     <div class="contact-icon consult"><a href="#formulario"><img src="./img/contact/chat.png"></a></div>
     <div class="contact-icon wp"><a href="#formulario"><img src="./img/contact/iconfinder_whatsapp_287615.png"></a></div> <!--  habría que cambiar la función del icono de whatsapp como para que envíe un msj  -->
 
@@ -90,21 +91,20 @@
             <div class="title"><h1>Fotos</h1></div>
             <div id="events">
                 <h3>Eventos</h3>
-                <!-- los eventos tienen números para mostrar unos y otros no, después se modifica con javascript o se hace un carrousel -->
-                <div class="pics_event uno"></div>
-                <div class="pics_event dos"></div>
-                <div class="pics_event tres"></div>
-                <div class="pics_event cuatro"></div>
-                <div class="pics_event cinco"></div>
-                <div class="pics_event seis"></div>
+                <div class="pics_event"></div>
+                <div class="pics_event"></div>
+                <div class="pics_event no-show"></div>
+                <div class="pics_event no-show"></div>
+                <div class="pics_event no-show"></div>
+                <div class="pics_event no-show"></div>
             </div>
 
             <div id="drinks">
                 <h3>Algunos de nuestros cóctails</h3>
-                <div class="pics_drink one"><div class="name"><p>Lynchbourg Lemonade</p></div></div>
-                <div class="pics_drink two"><div class="name"><p>Name2</p></div></div>
-                <div class="pics_drink three"><div class="name"><p>Name3</p></div></div>
-                <div class="pics_drink four"><div class="name"><p>Name4</p></div></div>
+                <div class="pics_drink"><div class="name"></div></div>
+                <div class="pics_drink"><div class="name"></div></div>
+                <div class="pics_drink no-show"><div class="name"></div></div>
+                <div class="pics_drink no-show"><div class="name"></div></div>
             </div>
            
         </section>
@@ -135,3 +135,5 @@
 <?php
     include('includes/footer.php');
 ?>
+
+</div>

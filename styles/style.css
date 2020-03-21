@@ -24,6 +24,44 @@ body{
     height: auto;
 }
 
+#loading{
+    display: flex;
+    position: absolute;
+    z-index: 999;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color:#E6E6E9; 
+    color:#03062B;
+}
+
+#loading-flex{
+    flex-flow: column;
+    justify-content: center;
+    font-size:large;
+    font-family: 'Kaushan Script', cursive !important;
+    font-weight: 200;
+}
+
+#gif{
+    width: 30vw;
+    height: 10vh;
+    background-image: url("../img/GIF/loading.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+}
+
+#logo-load{
+    height: 50vh;
+    width: 30vw;
+}
+
+#body-loaded{
+    display: none;
+}
+
 #header_desktop{
     margin: auto;
     height: 110px;
@@ -75,6 +113,7 @@ footer hr{
 
 footer span{
     margin: 0.5vh;
+    display: flex;
 }
 
 footer p{
@@ -255,6 +294,7 @@ p{
 
 .center{
     text-align: center;
+    margin: auto;
 }
 
 #plus h2{
@@ -297,17 +337,9 @@ hr{
 .pics_event{
     height: 40%;
     width: 30%;
-    background-color: #03062B;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.uno{
-    background-image: url("../img/events/event.png");
-}
-
-.dos{
-    background-image: url("../img/events/event2.png");
+    transition: ease-out 2s;
 }
 
 #drinks{
@@ -323,16 +355,11 @@ hr{
 .pics_drink{
     height: 60%;
     width: 20%;
-    background-color: #03062B;
-    position: relative;
     z-index: -1;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}
-
-.one{
-    background-image: url("../img/drinks/lynch.png");
+    transition: ease-out 2s;
 }
 
 .name{
@@ -341,7 +368,6 @@ hr{
     opacity: 0.5;
     background-color: #66666E;
     height: 15%;
-    position: absolute;
     z-index: 1;
     justify-items: center;
 }
@@ -499,9 +525,10 @@ a:hover{
         max-width: 504px;
         scroll-behavior: smooth;
     }
-    
-    body{
-        height: auto;
+
+    #logo-load{
+        height: 30vh;
+        width: 100%;
     }
     
     #header_desktop{
@@ -679,8 +706,12 @@ a:hover{
     }
 
     .serv{
-        width: 65%;
+        width: 85%;
         margin: 1vh auto;
+        display: flex;
+        justify-content: space-evenly;
+        flex-flow: column;
+        min-height: 23vh;
     }
 
     .serv p{
@@ -719,7 +750,7 @@ a:hover{
         flex-flow: column;
     }
     
-    .tres, .cuatro, .cinco, .seis{display: none;}
+    .no-show{display: none;}
 
     #fotos h3{
         font-size: 3.6vh;
@@ -730,17 +761,15 @@ a:hover{
     .pics_event{
         width: 80%;
         height: 35%;
-        background-color: #03062B;
         margin: auto;
     }
 
     #drinks{
-        height: 48%;
+        height: 38%;
     }
 
     .pics_drink{
-        width: 45%;
-        height: 45%;
+        width: 90%;
         margin: auto;
     }
 
@@ -837,10 +866,11 @@ a:hover{
             scroll-behavior: smooth;
         }
         
-        body{
-            height: auto;
+        #logo-load{
+            height: 30vh;
+            width: 100%;
         }
-        
+
         #header_desktop{
             display: none;
         }
@@ -1017,8 +1047,12 @@ a:hover{
         }
 
         .serv{
-            width: 65%;
+            width: 85%;
             margin: 1vh auto;
+            min-height: 20vh;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
         }
 
         .serv p{
@@ -1054,11 +1088,11 @@ a:hover{
         #events{
             margin: 1vh auto;
             width: 90%;
-            height: 40%;
+            height: 50%;
             flex-flow: column;
         }
         
-        .tres, .cuatro, .cinco, .seis{display: none;}
+        .no-show{display: none;}
 
         #fotos h3{
             font-size: 3.6vh;
@@ -1069,17 +1103,16 @@ a:hover{
         .pics_event{
             width: 80%;
             height: 44%;
-            background-color: #03062B;
             margin: auto;
         }
 
         #drinks{
-            height: 48%;
+            height: 38%;
         }
 
         .pics_drink{
             width: 45%;
-            height: 45%;
+            height: 85%;
             margin: auto;
         }
 
