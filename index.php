@@ -1,5 +1,5 @@
 <?php
-    define("TITLE", "Home - Refill | Barra Móvil");
+    define("TITLE", "Home - Vodkaholic! | Barra Móvil");
     include('includes/head.php');
 ?>
 
@@ -7,22 +7,26 @@
     <div class="contact-icon consult"><a href="#formulario"><img src="./img/contact/chat.png"></a></div>
     <div class="contact-icon wp"><a href="#formulario"><img src="./img/contact/iconfinder_whatsapp_287615.png"></a></div> <!--  habría que cambiar la función del icono de whatsapp como para que envíe un msj  -->
 
-    <header id="header_desktop">
-        <div id="logo1"></div>
-        <nav>
-            <?php include('includes/nav.php'); ?>
-        </nav>
-    </header>
+    <header>
+        <!-- header desktop -->
+        <div id="header_desktop">
+            <div id="logo1"></div>
+            <nav>
+                <?php include('includes/nav.php'); ?>
+            </nav>
+        </div>
 
-    <header id="header_mobile">
-        <div id="menu_icon" onclick="openNav()"><img src="./icon/menu.png" alt=""></div>
-        <div><h1>Refill </h1></div><div><h3> Barra Móvil</h3></div>
+        <!-- header mobile -->
+        <div id="header_mobile">
+           <div id="menu_icon" onclick="openNav()"><img src="./icon/menu.png" alt=""></div>
+        <div><h1>Vodkaholic! </h1></div><div><h3>Barra Móvil</h3></div>
         <div id="logo3"></div>
         <div id="mySidenav" class="sidenav">
             <nav>
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <?php include('includes/nav.php'); ?>
             </nav>
+        </div> 
         </div>
     </header>
 
@@ -114,7 +118,7 @@
 
             <form action="form.php" method="get" id="contact-form">
 
-                <label for="name">Nombre y Apellido: </label><input type="text" name="name" id="name-form" requested placeholder="Natalia Natalia" minlength="4" spellcheck="false"><br> <!-- Nombre -->
+                <label for="name">Nombre y Apellido: </label><input type="text" name="name" id="name-form" requested placeholder="Natalia Natalia" minlength="4" spellcheck="false"><br> <!-- Nombres -->
 
                 <label for="email">Email: </label><input type="email" name="email" id="email-form" requested placeholder="ejemplo@mail.com" spellcheck="false"><br> <!-- Email -->
 
