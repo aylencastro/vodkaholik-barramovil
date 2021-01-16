@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles/style.css">
     <script src="script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Advent+Pro|BenchNine|Dancing+Script|Kaushan+Script|Merienda|Pragati+Narrow|Tenor+Sans&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="./icon/iconfinder_anchor_3521344.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./icon/iconfinder_Cocktail_2376769.ico" type="image/x-icon">
     <title><?php echo TITLE; ?></title>
 </head>
 

@@ -2,20 +2,20 @@
 
     $navItems = [
         [
-            href => "#nosotros",
-            title => "Nosotros"
+            "href" => "#nosotros",
+            "title" => "Nosotros"
         ],
         [
-            href => "#servicios",
-            title => "Servicios"
+            "href" => "#servicios",
+            "title" => "Servicios"
         ],
         [
-            href => "#fotos",
-            title => "Fotos"
+            "href" => "#fotos",
+            "title" => "Fotos"
         ],
         [
-            href => "#formulario",
-            title => "Contacto"
+            "href" => "#formulario",
+            "title" => "Contacto"
         ]
     ];
 
