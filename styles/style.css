@@ -1,5 +1,4 @@
-/* DIFERENTES FUENTES GOOGLE FONTS:
-
+/* DIFERENTES FUENTES USADAS DE GOOGLE FONTS:
 font-family: 'Dancing Script', cursive;
 font-family: 'Kaushan Script', cursive;
 font-family: 'BenchNine', sans-serif;
@@ -342,6 +341,25 @@ hr{
     transition: ease-out 2s;
 }
 
+.pics_event:nth-child(1){
+    background-image: url("../img/events/event1.jpg");
+}
+.pics_event:nth-child(2){
+    background-image: url("../img/events/event2.jpg");
+}
+.pics_event:nth-child(3){
+    background-image: url("../img/events/event3.jpg");
+}
+.pics_event:nth-child(4){
+    background-image: url("../img/events/event4.jpg");
+}
+.pics_event:nth-child(5){
+    background-image: url("../img/events/event5.jpg");
+}
+.pics_event:nth-child(6){
+    background-image: url("../img/events/event6.jpg");
+}
+
 #drinks{
     height: 30%;
     margin: auto;
@@ -360,6 +378,19 @@ hr{
     background-size: cover;
     background-position: center;
     transition: ease-out 2s;
+}
+
+.pics_drink:nth-child(1){
+    background-image: url("../img/drinks/drink1.png");
+}
+.pics_drink:nth-child(2){
+    background-image: url("../img/drinks/drink2.png");
+}
+.pics_drink:nth-child(3){
+    background-image: url("../img/drinks/drink3.png");
+}
+.pics_drink:nth-child(4){
+    background-image: url("../img/drinks/drink4.png");
 }
 
 .name{
