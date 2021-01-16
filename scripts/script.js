@@ -1,6 +1,6 @@
 // Nav que se esconde en mobile 
-  var prevScrollpos = window.pageYOffset;
-  window.onscroll = function() {
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("header_mobile").style.top = "0";
