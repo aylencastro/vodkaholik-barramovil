@@ -1,5 +1,4 @@
-/* DIFERENTES FUENTES GOOGLE FONTS:
-
+/* DIFERENTES FUENTES USADAS DE GOOGLE FONTS:
 font-family: 'Dancing Script', cursive;
 font-family: 'Kaushan Script', cursive;
 font-family: 'BenchNine', sans-serif;
@@ -22,6 +21,44 @@ body{
     width: 100%;
     background-color: #E6E6E9;
     height: auto;
+}
+
+#loading{
+    display: flex;
+    position: absolute;
+    z-index: 999;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color:#E6E6E9; 
+    color:#03062B;
+}
+
+#loading-flex{
+    flex-flow: column;
+    justify-content: center;
+    font-size:large;
+    font-family: 'Kaushan Script', cursive !important;
+    font-weight: 200;
+}
+
+#gif{
+    width: 30vw;
+    height: 10vh;
+    background-image: url("../img/GIF/loading.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+}
+
+#logo-load{
+    height: 50vh;
+    width: 30vw;
+}
+
+#body-loaded{
+    display: none;
 }
 
 #header_desktop{
@@ -47,18 +84,45 @@ main{
 }
 
 footer{
-    height: 100px;
-    background-color: #03062B;
+    height: auto;
+    background-color: #E6E6E9;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.footer-text{
+    color: #03062B;
+    width: 80%;
+    margin: 3vh auto;
     display: flex;
     flex-flow: column;
-    color: #9999A1;
-    margin-bottom: 0;
-    font-family: 'Tenor Sans', sans-serif;
+}
+
+footer a{
+    width: 100%;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: flex-start;
+}
+
+footer hr{
+    width: 70%;
+    margin: 3.5vh auto;
+}
+
+footer span{
+    margin: 0.5vh;
+    display: flex;
 }
 
 footer p{
-    text-align: center;
-    width: 100%;
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: medium;
+    margin: auto 0;
+}
+
+footer h3{
+    font-family: 'Kaushan Script', cursive;
 }
 
 #logo1{
@@ -90,6 +154,7 @@ footer p{
 .contact-icon{
     position: fixed;
     margin-left: 10px;
+    transition: left 0.7s;
 }
 
 .contact-icon img{
@@ -228,6 +293,7 @@ p{
 
 .center{
     text-align: center;
+    margin: auto;
 }
 
 #plus h2{
@@ -270,17 +336,28 @@ hr{
 .pics_event{
     height: 40%;
     width: 30%;
-    background-color: #03062B;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: ease-out 2s;
 }
 
-.uno{
-    background-image: url("../img/events/event.png");
+.pics_event:nth-child(1){
+    background-image: url("../img/events/event1.jpg");
 }
-
-.dos{
-    background-image: url("../img/events/event2.png");
+.pics_event:nth-child(2){
+    background-image: url("../img/events/event2.jpg");
+}
+.pics_event:nth-child(3){
+    background-image: url("../img/events/event3.jpg");
+}
+.pics_event:nth-child(4){
+    background-image: url("../img/events/event4.jpg");
+}
+.pics_event:nth-child(5){
+    background-image: url("../img/events/event5.jpg");
+}
+.pics_event:nth-child(6){
+    background-image: url("../img/events/event6.jpg");
 }
 
 #drinks{
@@ -296,16 +373,24 @@ hr{
 .pics_drink{
     height: 60%;
     width: 20%;
-    background-color: #03062B;
-    position: relative;
     z-index: -1;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: ease-out 2s;
 }
 
-.one{
-    background-image: url("../img/drinks/lynch.png");
+.pics_drink:nth-child(1){
+    background-image: url("../img/drinks/drink1.png");
+}
+.pics_drink:nth-child(2){
+    background-image: url("../img/drinks/drink2.png");
+}
+.pics_drink:nth-child(3){
+    background-image: url("../img/drinks/drink3.png");
+}
+.pics_drink:nth-child(4){
+    background-image: url("../img/drinks/drink4.png");
 }
 
 .name{
@@ -314,7 +399,6 @@ hr{
     opacity: 0.5;
     background-color: #66666E;
     height: 15%;
-    position: absolute;
     z-index: 1;
     justify-items: center;
 }
@@ -402,12 +486,6 @@ textarea{
     padding-top: 5vh;
 }
 
-.main-form{
-    height: 82.3vh;
-    font-family: 'Tenor Sans', sans-serif;
-    transition: none;
-}
-
 .alerts{
     height: 100%;
     width: 100%; 
@@ -461,11 +539,11 @@ a:hover{
     background-color: rgb(8, 11, 63);
 }
 
-.instagram{
-    width: 25px;
+.footer-contacto{
+    width: 42px;
 }
 
-.instagram a:hover{
+.footer-contacto a:hover{
     text-shadow: none;
 }
 
@@ -478,9 +556,10 @@ a:hover{
         max-width: 504px;
         scroll-behavior: smooth;
     }
-    
-    body{
-        height: auto;
+
+    #logo-load{
+        height: 30vh;
+        width: 100%;
     }
     
     #header_desktop{
@@ -502,12 +581,6 @@ a:hover{
     main{
         height: auto;
     }
-    
-    footer{
-        height: 150px;
-        margin-bottom: 0;
-        bottom: 0;
-    }    
 
     #menu_icon{
         height: 7vh;
@@ -664,8 +737,12 @@ a:hover{
     }
 
     .serv{
-        width: 65%;
+        width: 85%;
         margin: 1vh auto;
+        display: flex;
+        justify-content: space-evenly;
+        flex-flow: column;
+        min-height: 23vh;
     }
 
     .serv p{
@@ -704,7 +781,7 @@ a:hover{
         flex-flow: column;
     }
     
-    .tres, .cuatro, .cinco, .seis{display: none;}
+    .no-show{display: none;}
 
     #fotos h3{
         font-size: 3.6vh;
@@ -715,17 +792,15 @@ a:hover{
     .pics_event{
         width: 80%;
         height: 35%;
-        background-color: #03062B;
         margin: auto;
     }
 
     #drinks{
-        height: 48%;
+        height: 38%;
     }
 
     .pics_drink{
-        width: 45%;
-        height: 45%;
+        width: 90%;
         margin: auto;
     }
 
@@ -803,8 +878,12 @@ a:hover{
         height: 8vh;
     }
 
-    .instagram{
-        width: 6vw;
+    footer p{
+        font-size: 2vh;
+    }
+
+    .footer-contacto{
+        width: 8vw;
     }
 
 }
@@ -818,10 +897,11 @@ a:hover{
             scroll-behavior: smooth;
         }
         
-        body{
-            height: auto;
+        #logo-load{
+            height: 30vh;
+            width: 100%;
         }
-        
+
         #header_desktop{
             display: none;
         }
@@ -841,13 +921,7 @@ a:hover{
         main{
             height: auto;
         }
-        
-        footer{
-            height: 150px;
-            margin-bottom: 0;
-            bottom: 0;
-        }    
-
+       
         #menu_icon{
             height: 7vh;
             margin-top: 1.5vh;
@@ -1004,8 +1078,12 @@ a:hover{
         }
 
         .serv{
-            width: 65%;
+            width: 85%;
             margin: 1vh auto;
+            min-height: 20vh;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
         }
 
         .serv p{
@@ -1041,11 +1119,11 @@ a:hover{
         #events{
             margin: 1vh auto;
             width: 90%;
-            height: 40%;
+            height: 50%;
             flex-flow: column;
         }
         
-        .tres, .cuatro, .cinco, .seis{display: none;}
+        .no-show{display: none;}
 
         #fotos h3{
             font-size: 3.6vh;
@@ -1056,17 +1134,16 @@ a:hover{
         .pics_event{
             width: 80%;
             height: 44%;
-            background-color: #03062B;
             margin: auto;
         }
 
         #drinks{
-            height: 48%;
+            height: 38%;
         }
 
         .pics_drink{
             width: 45%;
-            height: 45%;
+            height: 85%;
             margin: auto;
         }
 
@@ -1152,10 +1229,13 @@ a:hover{
             height: 8vh;
         }
 
-        .instagram{
-            width: 3vw;
+        .footer-contacto{
+            width: 8vw;
         }
 
+        footer p{
+            font-size: larger;
+        }
     
     }
 

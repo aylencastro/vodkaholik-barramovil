@@ -1,5 +1,3 @@
-
-
     <section class="error alerts">
         <div>
             <h1>Por favor complete el siguiente campo: <?php echo EMPTY; ?></h1>

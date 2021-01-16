@@ -1,6 +1,5 @@
 <?php
-
-  define("TITLE", "Refill | Barra Móvil");
+  define("TITLE", "Vodkaholic! | Barra Móvil");
   include('includes/head.php');
   include('includes/main.php');
 
@@ -48,7 +47,6 @@
 
   //Chequear que estén todos los campos no-vacíos
   // (ELSE) Si está toda la info, entonces se guarda en la variable sin espacios en blanco
-
   if (empty($_GET['name'])) 
     {
       define("EMPTY", "NOMBRE");
@@ -84,11 +82,11 @@
         die;
       }
 
-          //A quién se envía el form 
-          $to = "refill.barramovil@gmail.com";
+          //A quién se envía el form (HAY QUE MODIFICAR ESTO CON EL MAIL QUE CORRESPONDA)
+          $to = "vodkaholic.barramovil@gmail.com";
 
           //Agregar subject al email
-          $subject = "[REFILL-BARRA MÓVIL] " . $name . " te ha enviado una consulta.";
+          $subject = "[VODKAHOLIC!-BARRA MÓVIL] " . $name . " te ha enviado una consulta.";
 
           //Mensaje/Email 
           $mensaje .= "Nombre: " . $name ."\r\n";
@@ -96,8 +94,8 @@
           $mensaje .= "Consulta: \r\n " . $msg;
           $mensaje = wordwrap($mensaje, 75); //Emprolija mensaje en 75 caracteres por línea
 
-          //Poner header del mail en una variable
-          $header = "From: aylu@avmec.com\nReply-To: " . $name ."<". $email .">\n";
+          //Poner header del mail en una variable (ACTUALIZAR EL FROM)
+          $header = "From: vodkaholic@vodkaholic-barramovil.com\nReply-To: " . $name ."<". $email .">\n";
           $header .= "Mime-Version: 1.0\n";
           $header .= "Content-Type: text/plain";
           
@@ -115,5 +113,4 @@
         </script>
 <?php        
   }
-
 ?>
