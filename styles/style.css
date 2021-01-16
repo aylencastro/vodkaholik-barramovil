@@ -75,6 +75,9 @@ footer hr{
 
 footer span{
     margin: 0.5vh;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: flex-start;
 }
 
 footer p{
@@ -90,8 +93,8 @@ footer h3{
 #logo1{
     margin: auto 50px;
     height: 100px;
-    width: 100px;
-    background-image: url("../img/anchor/anchor_pelada.png");
+    width: 200px;
+    background-image: url("../img/logo/Vodkaholic2_transparent.png");
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -198,7 +201,7 @@ p{
 }
 
 .logo2{
-    background-image: url("../img/anchor/anchor.png");
+    background-image: url("../img/logo/Vodkaholic_transparent.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -297,17 +300,25 @@ hr{
 .pics_event{
     height: 40%;
     width: 30%;
-    background-color: #03062B;
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: url("../img/events/event1.jpg");
 }
 
-.uno{
-    background-image: url("../img/events/event.png");
+.pics_event:nth-child(2){
+    background-image: url("../img/events/event2.jpg");
 }
-
-.dos{
-    background-image: url("../img/events/event2.png");
+.pics_event:nth-child(3){
+    background-image: url("../img/events/event3.png");
+}
+.pics_event:nth-child(4){
+    background-image: url("../img/events/event4.jpg");
+}
+.pics_event:nth-child(5){
+    background-image: url("../img/events/event5.jpg");
+}
+.pics_event:nth-child(6){
+    background-image: url("../img/events/event6.jpg");
 }
 
 #drinks{
@@ -323,16 +334,22 @@ hr{
 .pics_drink{
     height: 60%;
     width: 20%;
-    background-color: #03062B;
     position: relative;
     z-index: -1;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-image: url("../img/drinks/drink1.png");
 }
 
-.one{
-    background-image: url("../img/drinks/lynch.png");
+.pics_drink:nth-child(2){
+    background-image: url("../img/drinks/drink2.png");
+}
+.pics_drink:nth-child(3){
+    background-image: url("../img/drinks/drink3.jpg");
+}
+.pics_drink:nth-child(4){
+    background-image: url("../img/drinks/drink4.jpg");
 }
 
 .name{
@@ -403,14 +420,14 @@ textarea{
 #boton-enviar{
     color: #E6E6E9;
     background-color: #03062B;
-    width: 7vw;
+    width: 12vw;
     height: 6vh;
     margin: 5vh auto;
     border-radius: 30px;
 }
 
 #deco{
-    height: 33%;
+    height: 30%;
     display: flex;
     width: 100%;
     justify-content: space-around;
@@ -555,7 +572,7 @@ a:hover{
     #logo3{
         height: 90%;
         width: 19vw;
-        background-image: url("../img/anchor/ancla_sola.png");
+        background-image: url("../img/logo/Vodkaholic2_transparent.png");
         background-repeat: no-repeat;
         background-size: contain;
     }
@@ -719,7 +736,7 @@ a:hover{
         flex-flow: column;
     }
     
-    .tres, .cuatro, .cinco, .seis{display: none;}
+    .no-show{display: none;}
 
     #fotos h3{
         font-size: 3.6vh;
@@ -893,7 +910,7 @@ a:hover{
         #logo3{
             height: 90%;
             width: 19vw;
-            background-image: url("../img/anchor/ancla_sola.png");
+            background-image: url("../img/logo/Vodkaholic2_transparent.png");
             background-repeat: no-repeat;
             background-size: contain;
         }
@@ -1058,7 +1075,7 @@ a:hover{
             flex-flow: column;
         }
         
-        .tres, .cuatro, .cinco, .seis{display: none;}
+        .no-show{display: none;}
 
         #fotos h3{
             font-size: 3.6vh;
