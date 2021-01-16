@@ -1,5 +1,5 @@
 <?php
-    define("TITLE", "Home - Refill | Barra Móvil");
+    define("TITLE", "Home - Vodkaholic! | Barra Móvil");
     include('includes/head.php');
 ?>
 
@@ -15,7 +15,7 @@
 
     <header id="header_mobile">
         <div id="menu_icon" onclick="openNav()"><img src="./icon/menu.png" alt=""></div>
-        <div><h1>Refill </h1></div><div><h3> Barra Móvil</h3></div>
+        <div><h1>Vodkaholic! </h1></div><div><h3> Barra Móvil</h3></div>
         <div id="logo3"></div>
         <div id="mySidenav" class="sidenav">
             <nav>
@@ -91,20 +91,20 @@
             <div id="events">
                 <h3>Eventos</h3>
                 <!-- los eventos tienen números para mostrar unos y otros no, después se modifica con javascript o se hace un carrousel -->
-                <div class="pics_event uno"></div>
-                <div class="pics_event dos"></div>
-                <div class="pics_event tres"></div>
-                <div class="pics_event cuatro"></div>
-                <div class="pics_event cinco"></div>
-                <div class="pics_event seis"></div>
+                <div class="pics_event"></div>
+                <div class="pics_event"></div>
+                <div class="pics_event no-show"></div>
+                <div class="pics_event no-show"></div>
+                <div class="pics_event no-show"></div>
+                <div class="pics_event no-show"></div>
             </div>
 
             <div id="drinks">
                 <h3>Algunos de nuestros cóctails</h3>
-                <div class="pics_drink one"><div class="name"><p>Lynchbourg Lemonade</p></div></div>
-                <div class="pics_drink two"><div class="name"><p>Name2</p></div></div>
-                <div class="pics_drink three"><div class="name"><p>Name3</p></div></div>
-                <div class="pics_drink four"><div class="name"><p>Name4</p></div></div>
+                <div class="pics_drink"><div class="name"><p>Trago de Autor 1</p></div></div>
+                <div class="pics_drink"><div class="name"><p>Trago de Autor 2</p></div></div>
+                <div class="pics_drink no-show"><div class="name"><p>Trago de Autor 3</p></div></div>
+                <div class="pics_drink no-show"><div class="name"><p>Trago de Autor 4</p></div></div>
             </div>
            
         </section>
