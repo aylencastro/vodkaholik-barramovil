@@ -610,9 +610,10 @@ a:hover{
     #logo3{
         height: 90%;
         width: 19vw;
-        background-image: url("../img/logo/Vodkaholic2_transparent.png");
+        background-image: url("../img/logo/Vodk_transp.png");
         background-repeat: no-repeat;
         background-size: contain;
+        background-position: center;
     }
 
     .sidenav {
@@ -951,9 +952,10 @@ a:hover{
         #logo3{
             height: 90%;
             width: 19vw;
-            background-image: url("../img/logo/Vodkaholic2_transparent.png");
+            background-image: url("../img/logo/Vodk_transp.png");
             background-repeat: no-repeat;
             background-size: contain;
+            background-position: center;
         }
 
         .sidenav {
