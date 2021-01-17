@@ -3,25 +3,36 @@
     include('includes/head.php');
 ?>
 
+<div id="body-loaded">
     <div class="contact-icon consult"><a href="#formulario"><img src="./img/contact/chat.png"></a></div>
     <div class="contact-icon wp"><a href="#formulario"><img src="./img/contact/iconfinder_whatsapp_287615.png"></a></div> <!--  habría que cambiar la función del icono de whatsapp como para que envíe un msj  -->
 
-    <header id="header_desktop">
-        <div id="logo1"></div>
-        <nav>
-            <?php include('includes/nav.php'); ?>
-        </nav>
-    </header>
+    <header>
+        <!-- header desktop -->
+        <div id="header_desktop">
+            <div id="logo1"></div>
+            <nav>
+                <?php include('includes/nav.php'); ?>
+            </nav>
+        </div>
 
+<<<<<<< HEAD
     <header id="header_mobile">
         <div id="menu_icon" onclick="openNav()"><img src="./icon/menu.png" alt=""></div>
         <div><h1>Vodkaholic! </h1></div><div><h3> Barra Móvil</h3></div>
+=======
+        <!-- header mobile -->
+        <div id="header_mobile">
+           <div id="menu_icon" onclick="openNav()"><img src="./icon/menu.png" alt=""></div>
+        <div><h1>Vodkaholic! </h1></div><div><h3>Barra Móvil</h3></div>
+>>>>>>> 4f95ef1d7dc89dc94f3f4dcca18a505be061fde4
         <div id="logo3"></div>
         <div id="mySidenav" class="sidenav">
             <nav>
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <?php include('includes/nav.php'); ?>
             </nav>
+        </div> 
         </div>
     </header>
 
@@ -90,7 +101,10 @@
             <div class="title"><h1>Fotos</h1></div>
             <div id="events">
                 <h3>Eventos</h3>
+<<<<<<< HEAD
                 <!-- los eventos tienen números para mostrar unos y otros no, después se modifica con javascript o se hace un carrousel -->
+=======
+>>>>>>> 4f95ef1d7dc89dc94f3f4dcca18a505be061fde4
                 <div class="pics_event"></div>
                 <div class="pics_event"></div>
                 <div class="pics_event no-show"></div>
@@ -101,10 +115,17 @@
 
             <div id="drinks">
                 <h3>Algunos de nuestros cóctails</h3>
+<<<<<<< HEAD
                 <div class="pics_drink"><div class="name"><p>Trago de Autor 1</p></div></div>
                 <div class="pics_drink"><div class="name"><p>Trago de Autor 2</p></div></div>
                 <div class="pics_drink no-show"><div class="name"><p>Trago de Autor 3</p></div></div>
                 <div class="pics_drink no-show"><div class="name"><p>Trago de Autor 4</p></div></div>
+=======
+                <div class="pics_drink"><div class="name"></div></div>
+                <div class="pics_drink"><div class="name"></div></div>
+                <div class="pics_drink no-show"><div class="name"></div></div>
+                <div class="pics_drink no-show"><div class="name"></div></div>
+>>>>>>> 4f95ef1d7dc89dc94f3f4dcca18a505be061fde4
             </div>
            
         </section>
@@ -114,7 +135,7 @@
 
             <form action="form.php" method="get" id="contact-form">
 
-                <label for="name">Nombre y Apellido: </label><input type="text" name="name" id="name-form" requested placeholder="Natalia Natalia" minlength="4" spellcheck="false"><br> <!-- Nombre -->
+                <label for="name">Nombre y Apellido: </label><input type="text" name="name" id="name-form" requested placeholder="Natalia Natalia" minlength="4" spellcheck="false"><br> <!-- Nombres -->
 
                 <label for="email">Email: </label><input type="email" name="email" id="email-form" requested placeholder="ejemplo@mail.com" spellcheck="false"><br> <!-- Email -->
 
@@ -135,3 +156,5 @@
 <?php
     include('includes/footer.php');
 ?>
+
+</div>
